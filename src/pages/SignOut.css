@@ -1,0 +1,10 @@
+.SignPage{
+    background-color: #282c34;
+}
+
+.SignPageMainBlock{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,9 @@
+.MainPage{
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.NavLink{
+    color: cyan;
+}
