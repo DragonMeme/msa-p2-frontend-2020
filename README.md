@@ -4,6 +4,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+Before you start, there is one setting you can make.
+
+Create a `.env.local` file and/or set the environment variable `REACT_APP_SOME_URL` to the URL of the backend. The end of the url must not end with a slash.
+
+```env
+# SAMPLE
+REACT_APP_SOME_URL=http://localhost:3000
+```
+
 In the project directory, you can run:
 
 ### `npm start`
