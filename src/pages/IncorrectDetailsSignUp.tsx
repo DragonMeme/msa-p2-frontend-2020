@@ -81,6 +81,7 @@ export default function SignUp(props:any){
     return(
         <div className="SignPage">
             <h1>Register for ArtiCool!</h1>
+            <h5 className="errorText">Username taken or Passwords do not match!</h5>
             <Box
                 width={{xs:"300px", sm:"500px"}}
             >

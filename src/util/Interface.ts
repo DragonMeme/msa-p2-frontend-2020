@@ -15,7 +15,7 @@ export interface IArticle{
     createdDate: string,
     title: string,
     introduction: string,
-    fields: IFields[] | null
+    fields: IFields[]
 }
 
 export interface IArticleSummary{

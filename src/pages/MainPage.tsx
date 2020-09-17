@@ -49,9 +49,11 @@ export default class MainPage extends React.Component<any, IMainPageState>{
         return(
             <div className="MainPage">
                 <SearchBar SetUserInput={(a: IUserInput) => this.setSearchInput(a)} />
-                {this.renderWelcome()}
-                {this.renderSignInOption()}
-                <ArticleFieldCards SearchQuery={this.state.searchQuery.SearchQuery} />
+                <div className="TheMainContent">
+                    {this.renderWelcome()}
+                    {this.renderSignInOption()}
+                    <ArticleFieldCards SearchQuery={this.state.searchQuery.SearchQuery} />
+                </div>
             </div>
         )
     }

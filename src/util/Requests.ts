@@ -19,6 +19,20 @@ export default class Requests {
         return res;
     }
 
+    // Create account.
+    static async createAccount(creds: IUserPass){
+        let res = await fetch(BASE_URL + "/api/Users",{
+            headers: {
+                Accept: '*/*',
+                'Content-Type': 'application/json'
+            },
+            method: "POST",
+            body: JSON.stringify(creds)
+        });
+
+        return res;
+    }
+
     // Grab a list of articles in summary form.
     static async getArticleSummary(query: string | null){
         let res:Response;
