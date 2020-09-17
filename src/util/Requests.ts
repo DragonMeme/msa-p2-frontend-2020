@@ -9,10 +9,11 @@ export default class Requests {
     static async login(creds: IUserPass){
         let res = await fetch(BASE_URL + "/api/Users/Verify",{
             headers: {
-                Accept: 'application/json'
+                Accept: '*/*',
+                'Content-Type': 'application/json'
             },
-            method: "GET",
-            body: JSON.stringify({ userName: creds.userName, passWord: creds.passWord })
+            method: "POST",
+            body: JSON.stringify(creds)
         });
 
         return res;

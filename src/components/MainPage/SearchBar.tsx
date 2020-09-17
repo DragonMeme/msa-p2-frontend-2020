@@ -1,4 +1,4 @@
-import { IUserInput } from "../util/Interface";
+import { IUserInput } from "../../util/Interface";
 import React, { useState } from "react";
 import { Button, TextField, AppBar, Box } from "@material-ui/core";
 import "./SearchBar.css";

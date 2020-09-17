@@ -1,8 +1,8 @@
 import React from "react";
 import { IUserInput } from "../util/Interface";
 import User from "../util/User";
-import SearchBar from "../components/SearchBar";
-import ArticleFieldCards from "../components/ArticleFieldCards";
+import SearchBar from "../components/MainPage/SearchBar";
+import ArticleFieldCards from "../components/MainPage/ArticleFieldCards";
 import "./MainPage.css";
 import { NavLink } from "react-router-dom";
 
@@ -35,12 +35,21 @@ export default class MainPage extends React.Component<any, IMainPageState>{
         );
     }
 
+    renderWelcome(){
+        if(this.state.isLoggedIn) {
+            let user = User.getUserState()?.userName;
+            return(<h2>Welcome to ArtiCool, {user}!</h2>)
+        }else{
+            return(<h2>Welcome to ArtiCool!</h2>)
+        }
+    }
+
     render(){
         document.title = "ArtiCool";
         return(
             <div className="MainPage">
                 <SearchBar SetUserInput={(a: IUserInput) => this.setSearchInput(a)} />
-                <h2>Welcome to ArtiCool!</h2>
+                {this.renderWelcome()}
                 {this.renderSignInOption()}
                 <ArticleFieldCards SearchQuery={this.state.searchQuery.SearchQuery} />
             </div>

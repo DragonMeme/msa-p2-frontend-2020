@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Requests from '../util/Requests';
-import { IArticleSummary } from '../util/Interface';
+import Requests from '../../util/Requests';
+import { IArticleSummary } from '../../util/Interface';
 import ArticleSummaryBlock from './ArticleSummaryBlock';
 import "./ArticleFieldCards.css";
 import { Box } from '@material-ui/core';

@@ -6,7 +6,7 @@ import Requests from "../util/Requests";
 import { IUserPass } from "../util/Interface";
 import { useHistory } from "react-router-dom";
 
-export default function SignIn(props: any) {
+export default function IncorrectDetailsSignIn(props: any) {
     const history = useHistory();
     const [state, setState] = useState<IUserPass>({
             userName: null,
@@ -49,6 +49,7 @@ export default function SignIn(props: any) {
     return(
         <div className="SignPage">
             <h1>Sign in to ArtiCool!</h1>
+            <h5 className="errorText">Incorrect username/password!</h5>
             <Box
                 width={{xs:"300px", sm:"500px"}}
             >

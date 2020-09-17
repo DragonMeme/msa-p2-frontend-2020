@@ -1,26 +1,8 @@
 import React from "react";
 import "./ArticleSummaryBlock.css";
-import { IArticleSummary } from "../util/Interface";
-import { Card, Typography, CardContent, makeStyles, CardActionArea } from "@material-ui/core";
+import { IArticleSummary } from "../../util/Interface";
+import { Card, Typography, CardContent, CardActionArea } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
-
-const useStyles = makeStyles({
-    root: {
-      maxWidth: 400,
-      width: 400
-    },
-    bullet: {
-      display: 'inline-block',
-      margin: '0 2px',
-      transform: 'scale(0.8)',
-    },
-    title: {
-      fontSize: 14,
-    },
-    pos: {
-      marginBottom: 12,
-    },
-});
 
 export default function(props: IArticleSummary){
     const history = useHistory();
@@ -31,9 +13,8 @@ export default function(props: IArticleSummary){
         history.push("/article?id=" + String(props.articleID));
     }
 
-    const classes = useStyles();
     return(
-        <Card className={classes.root} variant="outlined">
+        <Card variant="outlined">
             <CardActionArea onClick={routeChange}>
                 <CardContent className="ArticleSummaryBlock">
                     <Typography gutterBottom variant="h5" component="h2">
