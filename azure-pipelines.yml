@@ -29,6 +29,7 @@ steps:
   displayName: 'Install Node 12.x.'
 
 - script: |
+    cd $(rootDir)
     npm install
     npm run build
     cd ..
@@ -36,7 +37,7 @@ steps:
 
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: '$(Build.BinariesDirectory)'
+    rootFolderOrFile: '$(buildDir)'
     includeRootFolder: false
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
