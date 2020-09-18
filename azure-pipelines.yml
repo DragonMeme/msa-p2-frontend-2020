@@ -19,7 +19,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  rootDir: '.'
+  rootDir: '~'
   buildDir: '$(rootDir)/build'
 
 steps:
