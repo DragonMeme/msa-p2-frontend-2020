@@ -19,8 +19,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  rootDir: '~'
-  buildDir: '$(rootDir)/build'
+  buildDir: '/build'
 
 steps:
 - task: NodeTool@0
@@ -29,7 +28,6 @@ steps:
   displayName: 'Install Node 12.x.'
 
 - script: |
-    cd $(rootDir)
     npm install
     npm run build
     cd ..
