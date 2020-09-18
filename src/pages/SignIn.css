@@ -1,0 +1,15 @@
+.SignPage{
+    background-color: #282c34;
+    align-items: center;
+}
+
+.SignPageMainBlock{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.errorText{
+    color: red;
+}

@@ -1,0 +1,14 @@
+.SearchBarBox{
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.SearchBarComponent{
+    position: relative;
+}
+
+.Logo{
+    padding: 0;
+    vertical-align: unset;
+}

@@ -1,0 +1,13 @@
+h1.ErrorTextResultMessage{
+    color: #bb0000;
+}
+
+h1.NoResultMessage{
+    color: #999999;
+}
+
+.ResultCards{
+    padding: 0;
+    width: 100vh;
+    overflow-x: hidden;
+}

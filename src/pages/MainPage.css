@@ -1,0 +1,17 @@
+.MainPage{
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.TheMainContent{
+    height: calc(100vh - 80px);
+    width: 100vw;
+    top: 80px;
+    position: absolute;
+    overflow-y: scroll;
+}
+
+.NavLink{
+    color: cyan;
+}
