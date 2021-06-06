@@ -35,8 +35,10 @@ stages:
     steps:
     - task: Bash@3
       inputs:
-        filePath: '$(System.DefaultWorkingDirectory)'
-        arguments: 'echo "REACT_APP_SOME_URL=$(backendUrl)"'
+        script: echo REACT_APP_SOME_URL=$backendUrl >> ".env"
+      env:
+        backendUrl: $(backendUrl)
+        
     - task: ArchiveFiles@2
       displayName: 'Archive files'
       inputs:
