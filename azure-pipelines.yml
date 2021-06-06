@@ -69,3 +69,5 @@ stages:
               InlineScript: |
                 npm install
                 npm run build --if-present
+            env:
+              REACT_APP_SOME_URL: $(backendUrl)
