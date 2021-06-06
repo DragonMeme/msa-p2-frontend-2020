@@ -6,6 +6,9 @@
 trigger:
 - master
 
+# Do not trigger on pull request.
+pr: none 
+
 variables:
 
   # Azure Resource Manager connection created during pipeline creation
@@ -30,6 +33,10 @@ stages:
       vmImage: $(vmImageName)
 
     steps:
+    - task: Bash@3
+      inputs:
+        filePath: '$(System.DefaultWorkingDirectory)'
+        arguments: 'echo "REACT_APP_SOME_URL=$(backendUrl)"'
     - task: ArchiveFiles@2
       displayName: 'Archive files'
       inputs:
@@ -69,5 +76,4 @@ stages:
               InlineScript: |
                 npm install
                 npm run build --if-present
-            env:
-              REACT_APP_SOME_URL: $(backendUrl)
+              
