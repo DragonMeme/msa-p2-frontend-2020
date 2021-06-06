@@ -36,6 +36,7 @@ stages:
     - task: Bash@3
       inputs:
         script: echo REACT_APP_SOME_URL=$backendUrl >> ".env"
+        targetType: 'inline'
       env:
         backendUrl: $(backendUrl)
         
